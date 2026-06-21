@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ThinkFast</title>
+</head>
+<body>
+    <!--HEADER-->
+<header class="site-header">
+    <h1>Think Fast</h1>
+</header>
+
+    <!--MAIN CONTENT-->
+<main>
+<div id="quiz-app">
+    <!--START SCREEN-->
+    <div id="start-screen" class="screen">
+        <h1>Think Fast</h1>
+        <p>Test your knowledge with this quick quiz! Are you ready?</p>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!--QUESTION SCREEN-->
+    <div id="question-screen" class="screen hidden">
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <div id="timer">Time: 10s</div>
+        <p id="question-counter">Question 1 of 5</p>
+       <h2 id="question-text"></h2> 
+       <div id="options-container"></div>
+       <button id="next-btn">Next</button>
+    </div>
+    <!--END SCREEN-->
+    <div id="end-screen" class="screen hidden">
+        <h2>Quiz Complete!</h2>
+        <p id="final-score"></p>
+        <p id="score-message"></p>
+        <button id="retry-btn">Try Again</button>
+    </div>
+</div>
+</main>    
+    <!--FOOTER-->
+<footer>
+    <p>&copy; 2026 Think Fast Quiz.</p>
+    <p>Test your football knowledge!</p>
+</footer>
+</body>
+<script src="script.js"></script>
+</html>

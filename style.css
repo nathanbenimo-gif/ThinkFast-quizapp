@@ -1,0 +1,122 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+:root {
+    --primary: #d97706;
+    --correct: #16a34a;
+    --incorrect: #dc2626;
+    --surface: #ffffff;
+    --bg: #fffbeb;
+    --text: #1e293b;
+    --radius: 17px;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    font-family: 'inter', Ariel, sans-serif;
+}
+
+#quiz-app{
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 40px;
+    width: 100%;
+    max-width: 560px;
+}
+
+#timer{
+    width: 120px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+}
+.warning{
+    color: red;
+}
+
+
+.option-btn{
+    display: block; 
+    width: 100px;
+    padding: 14px 20px; 
+    margin-bottom: 12px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.option-btn:hover:not(.disabled) { 
+    border-color: var(--primary);
+}
+
+/*state classes-added by js*/
+.option-btn.correct {
+    background:#dcfce7;
+    border-color: var(--correct);
+    color: #14532d;
+}
+.option-btn.incorrect{
+    background: #fee2e2;
+    border-color: var(--incorrect);
+    color: #7f1d1d;
+}
+.option-btn.disabled{
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/*progress bar*/
+#progress-bar {
+    background: #e2e8f0;
+    border-radius: 99px;
+    height: 8px;
+}
+#progress-fill {
+    background: var(--primary);
+    border-radius: 99px;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+.hidden {
+    display: none;
+}
+#start-btn{
+    display:flex; 
+    width: 100px;
+    padding: 14px 20px; 
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+#next-btn{
+    display:flex; 
+    width: 100px;
+    padding: 14px 20px; 
+    margin-left:auto;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+#retry-btn{
+    display: flex;
+    width: 200px;
+    padding: 14px 20px;
+    background: #f8fafc;
+    border: 2px solid  #e2e8f0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
